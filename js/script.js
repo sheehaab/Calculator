@@ -14,7 +14,22 @@ function divide(a,b){
 	return a/b;
 }
 
-console.log(add(1,2))
-console.log(subtract(2,1))
-console.log(multiply(3,2))
-console.log(divide(10,5))
+function operate(num1,operator,num2){
+	result = 0;
+	if(operator === '+'){
+		result = add(num1,num2);
+	}
+	if(operator === '-'){
+		result = subtract(num1,num2);
+	}
+	if(operator === '*'){
+		result = multiply(num1,num2);
+	}
+	if(operator === '/'){
+		result = divide(num1,num2);
+	}
+	return result;
+}
+
+
+console.log(operate(1, '-' , 2));
