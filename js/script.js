@@ -61,7 +61,7 @@ let result = '';
 let equalIsPressed = false;
 let pointCounter = 0;
 
-
+//add to all buttons when clicked they will get the style in css
 allBtns.forEach((button)=>{
 	button.addEventListener("mousedown",function(){
 		button.style.cssText = 'background-color:#EEEEEE; transform:scale(.9);'
@@ -69,6 +69,229 @@ allBtns.forEach((button)=>{
 	button.addEventListener("mouseup",function(){
 		button.style.cssText = 'background-color:white;'
 	})
+})
+
+window.addEventListener('keydown',function(e){
+	if(e.key === '1'){
+		if(storing.length >= 14){
+		one.removeEventListener('click',function(){});
+	}else{
+		if(equalIsPressed){
+			storing = '';
+			equalIsPressed = false;
+		}
+			storing += '1';
+			display.textContent = storing;
+	}
+	}
+	if(e.key === '2'){
+		if(storing.length >= 14){
+		one.removeEventListener('click',function(){});
+	}else{
+		if(equalIsPressed){
+			storing = '';
+			equalIsPressed = false;
+		}
+			storing += '2';
+			display.textContent = storing;
+	}
+	}
+	if(e.key === '3'){
+		if(storing.length >= 14){
+		one.removeEventListener('click',function(){});
+	}else{
+		if(equalIsPressed){
+			storing = '';
+			equalIsPressed = false;
+		}
+			storing += '3';
+			display.textContent = storing;
+	}
+	}
+	if(e.key === '4'){
+		if(storing.length >= 14){
+		one.removeEventListener('click',function(){});
+		}else{
+			if(equalIsPressed){
+				storing = '';
+				equalIsPressed = false;
+			}
+				storing += '1';
+				display.textContent = storing;
+		}
+	}
+	if(e.key === '5'){
+		if(storing.length >= 14){
+		one.removeEventListener('click',function(){});
+		}else{
+			if(equalIsPressed){
+				storing = '';
+				equalIsPressed = false;
+			}
+				storing += '5';
+				display.textContent = storing;
+		}
+	}
+	if(e.key === '6'){
+		if(storing.length >= 14){
+		one.removeEventListener('click',function(){});
+		}else{
+			if(equalIsPressed){
+				storing = '';
+				equalIsPressed = false;
+			}
+				storing += '6';
+				display.textContent = storing;
+		}
+	}
+	if(e.key === '7'){
+		if(storing.length >= 14){
+		one.removeEventListener('click',function(){});
+		}else{
+			if(equalIsPressed){
+				storing = '';
+				equalIsPressed = false;
+			}
+				storing += '7';
+				display.textContent = storing;
+		}
+	}
+	if(e.key === '8'){
+		if(storing.length >= 14){
+		one.removeEventListener('click',function(){});
+		}else{
+			if(equalIsPressed){
+				storing = '';
+				equalIsPressed = false;
+			}
+				storing += '8';
+				display.textContent = storing;
+		}
+	}
+	if(e.key === '9'){
+		if(storing.length >= 14){
+		one.removeEventListener('click',function(){});
+		}else{
+			if(equalIsPressed){
+				storing = '';
+				equalIsPressed = false;
+			}
+				storing += '9';
+				display.textContent = storing;
+		}
+	}
+	if(e.key === '0'){
+		if(storing.length >= 14){
+		one.removeEventListener('click',function(){});
+		}else{
+			if(equalIsPressed){
+				storing = '';
+				equalIsPressed = false;
+			}
+				storing += '0';
+				display.textContent = storing;
+		}
+	}
+	if(e.key === 'Backspace'){
+		storing = storing.slice(0,-1);
+		display.textContent = storing;
+
+	}
+	if(e.key === 'c'){
+		empty();
+		
+	}
+	
+
+	if(e.key === '='){
+	
+		if(operator !== '' && storing !== ''){
+		secondNum = +storing;
+		result = operate(firstNum, operator,secondNum);
+		if(result === Infinity){
+			storing = '';
+			display.textContent = 'ERORR!';
+			operator = '';
+			equalIsPressed = true;
+		}else{
+			storing = result;
+			display.textContent = storing;
+			operator = '';
+			equalIsPressed = true;
+		}
+		}else{
+			equal.removeEventListener('click',function(){})
+		}
+
+			pointCounter=0;	
+	}
+
+
+	if(e.key === '*'){
+		if(operator === ''){
+			firstNum = +storing;
+			storing = '';
+			display.textContent = '';
+			operator = '*';
+		}else{
+			firstNum = operate(firstNum,operator,+storing);
+			storing = '';
+			display.textContent = firstNum;
+			operator = '*';
+		}
+		pointCounter=0;
+
+	}
+
+	if(e.key === '/'){
+		if(operator === ''){
+			firstNum = +storing;
+			storing = '';
+			display.textContent = '';
+			operator = '/';
+		}else{
+			firstNum = operate(firstNum,operator,+storing);
+			storing = '';
+			display.textContent = firstNum;
+			operator = '/';
+		}
+		pointCounter=0;
+	}
+
+	if(e.key === '-'){
+
+		if(operator === ''){
+			firstNum = +storing;
+			storing = '';
+			display.textContent = '';
+			operator = '-';
+		}else{
+			firstNum = operate(firstNum,operator,+storing);
+			storing = '';
+			display.textContent = firstNum;
+			operator = '-';
+		}
+		pointCounter=0;
+	}
+
+	if(e.key === '+'){
+		if(operator === ''){
+			firstNum = +storing;
+			storing = '';
+			display.textContent = '';
+			operator = '+';
+		}else{
+			firstNum = operate(firstNum,operator,+storing);
+			storing = '';
+			display.textContent = firstNum;
+			operator = '+';
+		}
+		pointCounter=0;
+	}
+	console.log(e.keyCode + " " + e.key);
+	let keyID = e.keyCode;
+	
+
 })
 
 
@@ -86,6 +309,7 @@ one.addEventListener('click',function(){;
 	}
 
 })
+
 
 
 two.addEventListener('click',function(){
@@ -220,23 +444,22 @@ clear.addEventListener('click',function(){
 deleteBtn.addEventListener('click',function(){
 	storing = storing.slice(0,-1);
 	display.textContent = storing;
-	console.log(storing);
 })
 
 plus.addEventListener('click',function(){
 	
 	
-		if(operator === ''){
-			firstNum = +storing;
-			storing = '';
-			display.textContent = '';
-			operator = '+';
-		}else{
-			firstNum = operate(firstNum,operator,+storing);
-			storing = '';
-			display.textContent = firstNum;
-			operator = '+';
-		}
+	if(operator === ''){
+		firstNum = +storing;
+		storing = '';
+		display.textContent = '';
+		operator = '+';
+	}else{
+		firstNum = operate(firstNum,operator,+storing);
+		storing = '';
+		display.textContent = firstNum;
+		operator = '+';
+	}
 	pointCounter=0;
 
 })
@@ -263,17 +486,17 @@ minus.addEventListener('click',function(){
 divided.addEventListener('click',function(){
 	
 	
-		if(operator === ''){
-			firstNum = +storing;
-			storing = '';
-			display.textContent = '';
-			operator = '/';
-		}else{
-			firstNum = operate(firstNum,operator,+storing);
-			storing = '';
-			display.textContent = firstNum;
-			operator = '/';
-		}
+	if(operator === ''){
+		firstNum = +storing;
+		storing = '';
+		display.textContent = '';
+		operator = '/';
+	}else{
+		firstNum = operate(firstNum,operator,+storing);
+		storing = '';
+		display.textContent = firstNum;
+		operator = '/';
+	}
 	pointCounter=0;
 
 })
