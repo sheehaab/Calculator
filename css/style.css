@@ -1,0 +1,182 @@
+body{
+	box-sizing: border-box;
+	background-color: #646464;
+}
+
+.flex-container{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	height:100vh;
+}
+
+.flex-container .calc-container{
+	background-color: #FFFFFD;
+	height:91%;
+	width:35%;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.flex-container .calc-container .upper{
+	display:flex;
+	flex-direction: column;
+	height:100%;
+	padding:10px; 
+}
+
+.flex-container .calc-container .upper .dots span{
+	height:15px;
+	width:15px;
+	margin-top:5px;
+	background-color: black;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.flex-container .calc-container .upper .numbers{
+	height:100%;
+	color:#000000;
+	display:flex;
+	align-items: center;
+	justify-content: flex-end;
+	font-size:3em;
+}
+
+.flex-container .calc-container .upper .dots span:first-of-type{
+	background-color: #f05454;
+}
+
+.flex-container .calc-container .upper .dots span:nth-of-type(2){
+	background-color: #EEEEEE;
+}
+
+
+
+.flex-container .calc-container .upper .dots span:last-of-type{
+	background-color: #b8de6f;
+}
+
+.flex-container .calc-container .lower{
+	display: flex;
+	flex-direction: column;
+-webkit-box-shadow: 0px -1px 7px 0px rgba(50, 50, 50, 0.26);
+-moz-box-shadow:    0px -1px 7px 0px rgba(50, 50, 50, 0.26);
+box-shadow:         0px -1px 7px 0px rgba(50, 50, 50, 0.26);
+height:65%;
+
+}
+
+.flex-container .calc-container .lower .all-btns,
+.flex-container .calc-container .lower .last-btns,
+.flex-container .calc-container .lower .first-btns{
+	display: flex;
+	justify-content: space-between;
+	height:20%;
+}
+
+
+
+button{
+	background: none;
+	border: none;
+	padding:7%;
+	font-weight: bolder;
+	font-size:30px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+button{
+	cursor: pointer;
+}
+
+
+.flex-container .calc-container .lower #delete-icon{
+	flex-basis: 25%;
+}
+
+.flex-container .calc-container .lower #delete{
+	flex-basis: 25%;
+}
+
+.flex-container .calc-container .lower #divided{
+	color:#AEAEAE;
+	flex-basis: 25%;
+}
+
+.flex-container .calc-container .lower #times{
+	color:#AEAEAE;
+}
+
+.flex-container .calc-container .lower #minus{
+	color:#AEAEAE;
+}
+
+.flex-container .calc-container .lower #plus{
+	color:#AEAEAE;
+}
+
+.flex-container .calc-container .lower #zero{
+	flex-basis: 50%;
+}
+
+.flex-container .calc-container .lower #point{
+	flex-basis: 25%;
+}
+
+.flex-container .calc-container .lower #equal{
+	color:#AEAEAE;
+	flex-basis: 25%;
+}
+
+
+
+.flex-container .calc-container .lower #times span{
+	width:35px;
+	height:35px;
+	display:inline-block;
+	background-color: #EEEEEE;
+	border-radius:50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-container .calc-container .lower #minus span{
+	width:35px;
+	height:35px;
+	display:inline-block;
+	background-color: #EEEEEE;
+	border-radius:50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-container .calc-container .lower #plus span{
+	width:35px;
+	height:35px;
+	display:inline-block;
+	background-color: #EEEEEE;
+	border-radius:50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-container .calc-container .lower #equal span{
+	width:35px;
+	height:35px;
+	display:inline-block;
+	background-color: #EEEEEE;
+	border-radius:50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
