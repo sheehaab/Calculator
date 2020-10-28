@@ -50,6 +50,7 @@ const divided = document.getElementById('divided');
 const minus = document.getElementById('minus');
 const deleteBtn = document.getElementById('delete');
 const allBtns = document.querySelectorAll('button');
+const point = document.getElementById('point');
 
 let storing = '';
 let firstNum = '';
@@ -58,10 +59,12 @@ let operator = '';
 let moreThanOperator = '';
 let result = '';
 let equalIsPressed = false;
+let pointCounter = 0;
+
 
 allBtns.forEach((button)=>{
 	button.addEventListener("mousedown",function(){
-		button.style.cssText = 'background-color:#EEEEEE; transform:scale(.9)'
+		button.style.cssText = 'background-color:#EEEEEE; transform:scale(.9);'
 	})
 	button.addEventListener("mouseup",function(){
 		button.style.cssText = 'background-color:white;'
@@ -234,7 +237,7 @@ plus.addEventListener('click',function(){
 			display.textContent = firstNum;
 			operator = '+';
 		}
-	
+	pointCounter=0;
 
 })
 
@@ -253,7 +256,7 @@ minus.addEventListener('click',function(){
 			display.textContent = firstNum;
 			operator = '-';
 		}
-	
+	pointCounter=0;
 })
 
 
@@ -271,7 +274,7 @@ divided.addEventListener('click',function(){
 			display.textContent = firstNum;
 			operator = '/';
 		}
-	
+	pointCounter=0;
 
 })
 
@@ -289,7 +292,7 @@ times.addEventListener('click',function(){
 			display.textContent = firstNum;
 			operator = '*';
 		}
-	
+	pointCounter=0;
 
 })
 
@@ -312,8 +315,17 @@ equal.addEventListener('click',function(){
 	}else{
 		equal.removeEventListener('click',function(){})
 	}
-		
+	
+		pointCounter=0;	
 
+})
+
+point.addEventListener('click',function(){
+	while(pointCounter < 1){
+		storing  += '.';
+		display.textContent = storing;
+		pointCounter+=1;
+	}
 })
 
 function empty(){
@@ -323,6 +335,7 @@ function empty(){
 	firstNum = '';
 	secondNum = '';
 	operator = '';
+	pointCounter=0;
 }
 
 

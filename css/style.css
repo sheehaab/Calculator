@@ -24,6 +24,8 @@ body{
 	flex-direction: column;
 	height:100%;
 	padding:10px; 
+ background: rgb(255,255,255);
+background: linear-gradient(140deg, rgba(255,255,255,1) 2%, rgba(250,250,250,1) 40%); 
 }
 
 .flex-container .calc-container .upper .dots span{
@@ -89,11 +91,11 @@ button{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
+
 }
 
-button{
-	cursor: pointer;
-}
+
 
 
 .flex-container .calc-container .lower #delete-icon{
