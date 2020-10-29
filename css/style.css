@@ -2,6 +2,8 @@ body{
 	box-sizing: border-box;
 	background: rgb(254,150,153);
 	background: linear-gradient(140deg, rgba(254,150,153,1) 5%, rgba(223,79,165,1) 98%); 
+	font-family: 'Open Sans', sans-serif;
+	font-size:1.2em;
 }
 
 button{
@@ -143,9 +145,9 @@ button{
 
 }
 
-.flex-container .calc-container .lower #delete-icon{
+.flex-container .calc-container .lower .delete-icon{
 	flex-basis: 25%;
-	color:red;
+	color:#ff2742;
 	font-size:1.2em;
 }
 
@@ -265,6 +267,10 @@ input:checked + .slider:before {
 
 .dark-mode-operator-span{
 	background-color: #485360 !important;
+}
+
+.dark-mode-delte-icon{
+	color:#d4707f !important;
 }
 
 

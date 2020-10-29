@@ -105,6 +105,9 @@ toggle.addEventListener('click',function(){
 			circle.classList.remove('dark-mode-operator-span');
 		})
 
+		clear.classList.remove('dark-mode-delte-icon');
+
+
 	}else if(toggle.checked === true){
 		calcBackground.classList.add('dark-mode-calc-container');
 		numbersColor.classList.add('dark-mode-numbers-upper');
@@ -152,6 +155,8 @@ toggle.addEventListener('click',function(){
 		lowerOpertatorsCircle.forEach((circle)=>{
 			circle.classList.add('dark-mode-operator-span');
 		})
+
+		clear.classList.add('dark-mode-delte-icon');
 		
 	}
 
