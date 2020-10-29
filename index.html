@@ -6,13 +6,14 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
 		<title>Calculator</title>
 	</head>
 	<body>
 		
 		<div class='flex-container'>
 			<!-- it takes the calculator components-->
-			<div class="calc-container">
+			<div class="calc-container ">
 				<!-- the place to display the numbers-->
 				<div class="upper">
 					<div class="dots">
@@ -20,46 +21,59 @@
 						<span></span>
 						<span></span>
 					</div>
-					<div class="numbers" id="displayNum">
-						
+					<div class="numbers" id="displayNum"></div>
+					<div class="upper-btns">
+						<button id="copy"><i class="fa fa-clone" aria-hidden="true"></i></button>
+						<button id="delete"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+						</button>
 					</div>
 				</div>
 
 				<div class="lower">
 					<div class="first-btns">
-						<button id="delete-icon">d
+						<button id="delete-icon"
+						class="uppper-operator"><i class="fa fa-trash" aria-hidden="true"></i>
 						</button>
-						<button id="delete">back</button>
+						<button id="percent" class="uppper-operator">&percnt;</button>
+						<button id="negative" class="uppper-operator">&plusmn;</button>
 
-						<button id="divided">&#xF7</button>
+						<button id="divided" class="uppper-operator">&divide;</button>
+					</div>
+
+					<div class="all-btns">
+						<button id="seven" class="js-style">7</button>
+						<button id="eight" class="js-style">8</button>
+						<button id="nine" class="js-style">9</button>
+						<button id="times" class="lower-operators"><span class="back-circle">&times;</span></button>
 					</div>
 					<div class="all-btns">
-						<button id="seven">7</button>
-						<button id="eight">8</button>
-						<button id="nine">9</button>
-						<button id="times"><span>&times</span></button>
+						<button id="four" class="js-style">4</button>
+						<button id="five" class="js-style">5</button>
+						<button id="six" class="js-style">6</button>
+						<button id="minus"  class="lower-operators"><span class="back-circle">&#8722;</span></button>
 					</div>
 					<div class="all-btns">
-						<button id="four">4</button>
-						<button id="five">5</button>
-						<button id="six">6</button>
-						<button id="minus"><span>-</span></button>
-					</div>
-					<div class="all-btns">
-						<button id="one">1</button>
-						<button id="two">2</button>
-						<button id="three">3</button>
-						<button id="plus"><span>+</span></button>
+						<button id="one" class="js-style">1</button>
+						<button id="two" class="js-style">2</button>
+						<button id="three" class="js-style">3</button>
+						<button id="plus"  class="lower-operators"><span class="back-circle">+</span></button>
 					</div>
 					<div class="last-btns">
-						<button id ="zero">0</button>
-						<button id ="point">.</button>
-						<button id="equal">
-							<span>=</span>
+						<button id ="zero" class="js-style">0</button>
+						<button id ="point" class="js-style">.</button>
+						<button id="equal"  class="lower-operators">
+							<span class="back-circle">=</span>
 						</button>
 					</div>
 				</div>
 			</div>
+
+			<div id="copy-msg" class='hidden-msg'></div>
+
+			<label class="switch">
+				<input type="checkbox" name="toggle" id="toggle" >
+				<span class="slider"></span>
+			</label>
 		</div>
 
 		<script src="js/script.js"></script>
