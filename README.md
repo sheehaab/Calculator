@@ -33,6 +33,7 @@ To run this project go to this live preview --> https://htmlpreview.github.io/?h
 * Make all the simple operation
 * Night mode
 * Simple UI
+* Keyboard supported
 
 ## Status
 Project is finished.
