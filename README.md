@@ -14,7 +14,7 @@ This a simple calculator as a web application it's make the simple operation eas
 ## General info
 I made this project because it was challenging to me to do the operation without any special data stracture it's like "stack", It improves my ability and my way of thinking and make me understand how the machine think.
 
-##Screenshots 
+## Screenshots 
 ![Normal calculator](calculator.jpg)
 ![Night-Mode calculator](night-mode-calculator.jpg)
 
